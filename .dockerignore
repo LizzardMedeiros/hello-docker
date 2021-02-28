@@ -1,3 +1,2 @@
-Dockerfile
-docker-composer.yml
-README.md
+.git
+*.md
