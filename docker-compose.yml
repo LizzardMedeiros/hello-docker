@@ -1,0 +1,16 @@
+version: "3.7"
+services: 
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: hellodocker-app
+    env_file: .env
+    image: lizzardmedeiros/hello-docker
+    restart: unless-stopped
+    working_dir: /app
+    volumes:
+      - ./:/app
+    ports:
+      - "3000:3000"
+    command: ["node", "app.js"]
